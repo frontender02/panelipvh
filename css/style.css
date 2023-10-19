@@ -171,6 +171,7 @@ p + p {
 .block-text {
 	display: grid;
 	gap: 0.5rem;
+	text-align: center;
 }
 .block-text__title {
 	font-weight: 500;
@@ -182,7 +183,7 @@ p + p {
 }
 .block-text__description {
 	margin: 0 auto;
-	max-width: 28rem;
+	max-width: 41rem;
 	font-weight: 300;
 }
 /** ================== /block-text ================== */
@@ -510,6 +511,9 @@ p + p {
 	grid-template-columns: repeat(auto-fill, minmax(24.375rem, 1fr));
 	overflow: hidden;
 }
+.products__description {
+	max-width: 28rem;
+}
 /** ================== /products ================== */
 
 /** ================== card-products ================== */
@@ -609,6 +613,32 @@ p + p {
 	font-size: 1rem;
 }
 /** ================== /partner ================== */
+
+/** ================== manufacturer ================== */
+.manufacturer__container {
+	padding-top: 5rem;
+	padding-bottom: 15rem;
+	position: relative;
+}
+.manufacturer__bg,
+.manufacturer__img-left {
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+}
+.manufacturer__bg {
+	left: 50%;
+	transform: translateX(-50%);
+}
+.manufacturer__bg img {
+	max-height: 15rem;
+}
+.manufacturer__img-left {
+	max-width: 16.875rem;
+	left: 0;
+	transform: scale(-1, 1);
+}
+/** ================== /manufacturer ================== */
 
 
 
@@ -732,6 +762,20 @@ p + p {
 	}
 	.profit__list-icon svg {
 		max-width: 1.75rem;
+	}
+
+	.manufacturer__container {
+		padding-top: 3.125rem;
+		padding-bottom: 3.125rem;
+	}
+	.manufacturer__bg {
+		bottom: 5%;
+		left: 50%;
+		transform: translate(-50%);
+		opacity: 0.3;
+	}
+	.manufacturer__img-left {
+		display: none;
 	}
 }
 
