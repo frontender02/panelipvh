@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<div class="app">
-            <div class="decor-top"><img src="./img/decor/home_bg.png" alt=""></div>
+            <div class="decor-top"><img src="./img/decor/home_bg.png"></div>
 			<header class="header">
 				<div class="header__container container">
 					<div class="header__inner">
@@ -104,7 +104,7 @@
                                 </button>
                                 <nav class="menu__body">
                                     <ul class="menu__list">
-                                        <li class="menu__item"><a class="menu__link" href="#!">Продукция</a></li>
+                                        <li class="menu__item"><a class="menu__link" href="/products.html">Продукция</a></li>
                                         <li class="menu__item"><a class="menu__link" href="#!">Сфера применения</a></li>
                                         <li class="menu__item"><a class="menu__link" href="#!">О компании</a></li>
                                         <li class="menu__item"><a class="menu__link" href="#!">География</a></li>
@@ -118,7 +118,7 @@
                     </div>
 				</div>
 			</header>
-            <main class="page">
+            <main class="page page-home">
                 <section class="home">
                     <div class="home__container container-min ">
                         <div class="home__slider swiper">
@@ -130,7 +130,7 @@
                                         <p class="home__slide-description">Качество по доступной цене</p>
                                         <div class="home__slide-buttons">
                                             <a class="home__slide-btn btn" href="#!">Заказать</a>
-                                            <a class="home__slide-btn btn btn-white" href="#!">Подробнее</a>
+                                            <a class="home__slide-btn btn btn-white" href="/products.html">Подробнее</a>
                                         </div>
                                     </div>
                                     <div class="home__slide-img"><img src="./img/content/slider-home_1.png" alt=""></div>
@@ -142,7 +142,7 @@
                                         <p class="home__slide-description">Качество по доступной цене</p>
                                         <div class="home__slide-buttons">
                                             <a class="home__slide-btn btn" href="#!">Заказать</a>
-                                            <a class="home__slide-btn btn btn-white" href="#!">Подробнее</a>
+                                            <a class="home__slide-btn btn btn-white" href="/products.html">Подробнее</a>
                                         </div>
                                     </div>
                                     <div class="home__slide-img"><img src="./img/content/slider-home_2.png" alt=""></div>
@@ -154,7 +154,36 @@
                         </div>
                     </div>
                 </section>
-
+                <section class="products">
+                    <div class="products__decor products__decor--top"><img src="./img/decor/products_bg-top.svg"></div>
+                    <div class="products__decor products__decor--bottom"><img src="./img/decor/products_bg-bottom.svg"></div>
+                    <div class="products__container container-min">
+                        <div class="products__text block-text">
+                            <h2 class="products__title block-text__title">Профессиональные стройматериалы</h2>
+                            <h3 class="products__subtitle block-text__subtitle"><span class="clr-accent">KRON</span>BUILD</h3>
+                            <p class="products__description block-text__description">
+                                Наша продукция - это эксклюзивные составляющие и сертифицированное качество.
+                            </p>
+                        </div>
+                        <ul class="products__cards">
+                            <li class="products__card card-products">
+                                <div class="card-products__img-wrapper"><img src="./img/products/kronbuild-pena-vsesezonnaya-one.png" alt="Монтажная пена Всесезонная ONE 65"></div>
+                                <h4 class="card-products__title">Пена монтажная</h4>
+                                <a class="card-products__link" href="#!">Подробнее</a>
+                            </li>
+                            <li class="products__card card-products">
+                                <div class="card-products__img-wrapper"><img src="./img/products/kley.png" alt="Клей монтажный (жидкие гвозди)"></div>
+                                <h4 class="card-products__title">Герметики и клеи</h4>
+                                <a class="card-products__link" href="#!">Подробнее</a>
+                            </li>
+                            <li class="products__card card-products">
+                                <div class="card-products__img-wrapper"><img src="./img/products/pistolet-headrock.png" alt="Пистолет для монтажной пены HeadRock F1"></div>
+                                <h4 class="card-products__title">Пистолеты</h4>
+                                <a class="card-products__link" href="#!">Подробнее</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
                 <section class="profit">
                     <div class="profit__container container-min">
                         <div class="profit__text">

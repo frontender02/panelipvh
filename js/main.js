@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const body = document.body
+	const body = document.body
 
-    // Menu
-    const menu = document.querySelector('.menu__body')
+	// Menu
+	const menu = document.querySelector('.menu__body')
 	const menuBtn = document.querySelector('.menu__icon')
 	if (menu && menuBtn) {
 		menuBtn.addEventListener('click', () => {

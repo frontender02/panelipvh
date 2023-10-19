@@ -2,6 +2,7 @@
 	--clr-white: #fff;
 	--clr-light-gray: #8c8c8c;
 	--clr-gray: #f5f6f7;
+	--clr-light-blue: #5bd1d7;
 
 	--clr-main: #000;
 	--clr-accent: #fdcf08;
@@ -34,6 +35,7 @@ ul li {
 img, svg {
 	display: inline-block;
 	max-width: 100%;
+	height: auto;
 	vertical-align: top;
 }
 
@@ -112,6 +114,23 @@ body.lock {
 	width: 100%;
 	object-fit: contain;
 }
+
+.products__decor {
+	position: absolute;
+	z-index: -1;
+}
+.products__decor img {
+	width: 100%;
+	object-fit: contain;
+}
+.products__decor--top {
+	top: -1rem;
+	left: 0;
+}
+.products__decor--bottom {
+	bottom: -11.25rem;
+	right: -3.125rem;
+}
 /** ================== /decor ================== */
 
 /** ================== logo ================== */
@@ -143,6 +162,26 @@ body.lock {
 		hue-rotate(355deg) brightness(104%) contrast(99%);
 }
 /** ================== /logo ================== */
+
+/** ================== block-text ================== */
+.block-text {
+	display: grid;
+	gap: 0.5rem;
+}
+.block-text__title {
+	font-weight: 500;
+	font-size: 1.875rem;
+}
+.block-text__subtitle {
+	font-weight: 900;
+	font-size: 4.875rem;
+}
+.block-text__description {
+	margin: 0 auto;
+	max-width: 28rem;
+	font-weight: 300;
+}
+/** ================== /block-text ================== */
 
 /** ================== links-contacts ================== */
 .links-contacts {
@@ -449,6 +488,82 @@ body.lock {
 }
 /** ================== /profit ================== */
 
+/** ================== products ================== */
+.page-products .products {
+	margin-top: -9.375rem;
+}
+.products {
+	padding: 12.5rem 0 3.125rem;
+	text-align: center;
+	position: relative;
+}
+.products__container {
+	display: grid;
+	gap: 2rem;
+}
+.products__cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(24.375rem, 1fr));
+	overflow: hidden;
+}
+/** ================== /products ================== */
+
+/** ================== card-products ================== */
+.card-products {
+	padding: 1.25rem;
+	display: grid;
+	align-content: center;
+	justify-items: center;
+	gap: 0.5rem;
+	background-color: var(--clr-gray);
+	position: relative;
+	overflow: hidden;
+}
+.card-products::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: var(--clr-white);
+	position: absolute;
+	bottom: 50%;
+	transition: bottom .3s ease-in-out;
+}
+.card-products__img-wrapper {
+	position: relative;
+}
+.card-products__img-wrapper img {
+	max-height: 12.5rem;
+}
+.card-products__title {
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 110%;
+	position: relative;
+}
+.card-products__link {
+	padding: 0.5rem 2rem;
+	display: inline-block;
+	font-weight: 500;
+	font-size: 0.875rem;
+	text-decoration: none;
+	color: var(--clr-main);
+	background-color: transparent;
+	border-radius: 6.25rem;
+	transition: background-color .3s ease-in-out;
+}
+.card-products:hover .card-products__link,
+.card-products__link:hover {
+	background-color: var(--clr-light-blue);
+}
+.card-products__link::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 99;
+}
+/** ================== /card-products ================== */
+
 
 
 
@@ -478,6 +593,7 @@ body.lock {
 /** ================== footer ================== */
 .footer {
 	padding: 2rem 0;
+	background-color: var(--clr-accent);
 }
 .footer__inner {
 	padding: 1.25rem 2.5rem;
@@ -579,6 +695,19 @@ body.lock {
 		font-size: 80%;
 	}
 
+	.page-home .products {
+		padding: 3.125rem 0;
+	}
+	.products__decor--top {
+		top: -4rem;
+		max-width: 12.5rem;
+	}
+	.products__decor--bottom {
+		bottom: -10rem;
+		/* right: -3.125rem; */
+		max-width: 27rem;
+	}
+
     .header .links-contacts__link {
         display: none;
     }
@@ -656,6 +785,13 @@ body.lock {
 		grid-column: 1 / 3;
 	}
 
+	.block-text__title {
+		font-size: 1rem;
+	}
+	.block-text__subtitle {
+		font-size: 3rem;
+	}
+
 	.footer__top {
 		flex-direction: column;
 	}
@@ -684,4 +820,12 @@ body.lock {
     .header__btn {
         display: none;
     }
+
+	.products__cards {
+		grid-template-columns: 1fr;
+		/* grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); */
+	}
+	.card-products__img-wrapper img {
+		max-height: 10rem;
+	}
 }
