@@ -69,6 +69,10 @@ body.lock {
 	margin: 0 auto;
 }
 
+p + p {
+	margin-top: 1em;
+}
+
 .btn {
 	padding: 0.5rem 2rem;
 	display: inline-block;
@@ -564,6 +568,47 @@ body.lock {
 }
 /** ================== /card-products ================== */
 
+/** ================== partner ================== */
+.partner {
+	padding-bottom: 3.125rem;
+}
+.partner__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.875rem;
+}
+.partner__info,
+.partner__img-wrapper {
+	flex: 0 1 48%;
+}
+.partner__logo-wrapper {
+	margin-bottom: 1.75rem;
+}
+.partner__title {
+	margin-bottom: 1.25em;
+	font-weight: 500;
+	font-size: 2rem;
+	line-height: 150%; 
+}
+.partner__description {
+	font-weight: 500;
+	line-height: 160%;
+}
+.partner--headrock .partner__link {
+	background-color: #EA2442;
+	border: #EA2442;
+	transition: opacity .3s ease-in-out;
+}
+.partner--headrock .partner__link:hover {
+	opacity: 0.8;
+}
+.partner__link {
+	margin-top: 2.5rem;
+	padding: 0.625rem 2rem;
+	font-size: 1rem;
+}
+/** ================== /partner ================== */
 
 
 
@@ -792,6 +837,16 @@ body.lock {
 		font-size: 3rem;
 	}
 
+	.partner__container {
+		align-items: flex-start;
+	}
+	.partner__info {
+		flex: 0 1 60%;
+	}
+	.partner__img-wrapper {
+		flex: 0 1 35%;
+	}
+
 	.footer__top {
 		flex-direction: column;
 	}
@@ -809,6 +864,13 @@ body.lock {
 	.footer__contacts .links-contacts__text,
 	.footer__contacts .links-contacts__title {
 		display: block;
+	}
+}
+
+@media (max-width: 576px) {
+	.partner__container {
+		flex-direction: column-reverse;
+		text-align: center;
 	}
 }
 
