@@ -849,6 +849,38 @@ p + p {
 }
 /** ================== /company ================== */
 
+/** ================== advantages-company ================== */
+.advantages-company {
+	padding: 3.125rem 0;
+	background-color: var(--clr-white);
+}
+.advantages-company__list {
+	display: flex;
+	justify-content: space-between;
+	gap: 3.125rem;
+}
+.advantages-company__item {
+	max-width: 32.5rem;
+}
+.advantages-company__icon-wrapper {
+	margin-bottom: 1rem;
+	width: 5.3125rem;
+	height: 5.3125rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	border: 0.1875rem solid var(--clr-accent);
+}
+.advantages-company__icon-wrapper svg {
+	width: 2.6875rem;
+	height: 2.6875rem;
+}
+.advantages-company__description {
+	line-height: 150%;
+}
+/** ================== /advantages-company ================== */
+
 
 
 
@@ -1161,6 +1193,16 @@ p + p {
 	.partner__container {
 		flex-direction: column-reverse;
 		text-align: center;
+	}
+
+	.advantages-company__list {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	.advantages-company__icon-wrapper {
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
