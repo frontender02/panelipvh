@@ -39,6 +39,14 @@ img, svg {
 	vertical-align: top;
 }
 
+a {
+	color: inherit;
+}
+
+button, label {
+	cursor: pointer;
+}
+
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1rem;
@@ -67,6 +75,18 @@ body.lock {
 	max-width: 1200px;
 	padding: 0 15px;
 	margin: 0 auto;
+}
+
+.visually-hidden {
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: none;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
 }
 
 p + p {
@@ -176,6 +196,10 @@ p + p {
 .block-text__title {
 	font-weight: 500;
 	font-size: 1.875rem;
+}
+.block-text__title-min {
+	font-weight: 800;
+	font-size: 2.125rem
 }
 .block-text__subtitle {
 	font-weight: 900;
@@ -640,6 +664,140 @@ p + p {
 }
 /** ================== /manufacturer ================== */
 
+/** ================== form ================== */
+.form__input,
+.form__message {
+	padding: 1.125rem 1.375rem;
+	border: none;
+	outline: none;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	color: var(--clr-main);
+	background-color: var(--clr-white);
+}
+.form__input {
+	border-radius: 6.25rem;
+}
+.form__message {
+	padding-top: 1.75rem;
+	padding-bottom: 1.75rem;
+	border-radius: 0.625rem;
+	resize: none;	
+}
+.form__input::placeholder,
+.form__message::placeholder {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.875rem;
+	color: var(--clr-light-gray);
+}
+.form__label-checkbox {
+	display: flex;
+	align-items: flex-start;
+}
+.form__castom-checkbox {
+	margin-top: 0.125rem;
+	margin-right: 0.625rem;
+	display: inline-block;
+	width: 1.25rem;
+	height: 1.25rem;
+	background-color: var(--clr-white);
+	border-radius: 0.25rem;
+	border: 1px solid var(--border);
+	cursor: pointer;
+	position: relative;
+	transition: border-color .2s ease-in;
+}
+.form__castom-checkbox::before {
+	content: '';
+	display: inline-block;
+	width: 0.875rem;
+	height: 0.875rem;
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 30 30"><path d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"></path></svg>');
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: transform .2s ease-in;
+}
+.form__input-checkbox:checked + .form__castom-checkbox::before {
+	transform: translate(-50%, -50%) scale(1);
+}
+.form__input-checkbox:focus + .form__castom-checkbox {
+	border-color: var(--clr-accent);
+}
+.form__label-text {
+	font-size: 0.875rem;
+	line-height: 150%;
+}
+/** ================== /form ================== */
+
+/** ================== form-feedback ================== */
+.form-feedback {
+	margin-top: 1.5rem;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	gap: 1.5rem;
+}
+.form-feedback__grid {
+	max-width: 42rem;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	gap: 1rem;
+}
+.form-feedback__message {
+	grid-column: 1 / -1;
+	grid-row: 3 / -1;
+}
+.form-feedback__btn {
+	text-align: center;
+}
+/** ================== /form-feedback ================== */
+
+/** ================== feedback ================== */
+.feedback {
+	background-color: var(--clr-accent);
+	position: relative;
+	overflow: hidden;
+}
+.feedback__text-decor {
+	position: absolute;
+	top: 50%;
+}
+.feedback__text-decor--left {
+	left: 0;
+	transform: translateY(-50%);
+}
+.feedback__text-decor--right {
+	right: 0;
+	transform: translateY(-50%);
+}
+.feedback__container {
+	padding-top: 6.875rem;
+	padding-bottom: 4.25rem;
+	position: relative;
+}
+.feedback__title {
+	text-transform: uppercase;
+}
+.feedback__title span {
+	color: var(--clr-white);
+}
+.feedback__description {
+	max-width: 22rem;
+}
+/** ================== /feedback ================== */
+
+
+
+
+
+
+
 
 
 
@@ -776,6 +934,26 @@ p + p {
 	}
 	.manufacturer__img-left {
 		display: none;
+	}
+
+	.form__input,
+	.form__message {
+		padding: 0.6875rem 1.125rem 0.8125rem;
+	}
+
+	.feedback__text-decor {
+		max-width: 2.5rem;
+	}
+	.feedback__container {
+		padding-top: 3.125rem;
+		padding-bottom: 3.125rem;
+	}
+	.form-feedback__grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(7, 1fr);
+	}
+	.form-feedback__message {
+		grid-row: 5 / -1;
 	}
 }
 

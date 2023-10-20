@@ -3,12 +3,12 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Потолки ПВХ | Продукция</title>
+		<title>Потолки ПВХ | Сфера применения</title>
 		<link rel="stylesheet" href="./css/fonts.css" />
-		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="./css/normalize.css" />
+		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="./css/style.css" />
-		<link rel="icon" type="image/png" href="./img/favicon.png">
+		<link rel="icon" type="image/png" href="./img/favicon.png" />
 	</head>
 	<body>
 		<div class="app">
@@ -16,7 +16,10 @@
 				<div class="header__container container">
 					<div class="header__inner">
 						<div class="header__top">
-							<a class="header__logo logo" href="https://frontender02.github.io/panelipvh/">
+							<a
+								class="header__logo logo"
+								href="https://frontender02.github.io/panelipvh/"
+							>
 								<img
 									class="header__logo-icon logo__icon"
 									src="./img/panel-logo-icon.png"
@@ -113,10 +116,10 @@
 								<nav class="menu__body">
 									<ul class="menu__list">
 										<li class="menu__item">
-											<a class="menu__link" href="#!">Продукция</a>
+											<a class="menu__link" href="https://frontender02.github.io/panelipvh/products">Продукция</a>
 										</li>
 										<li class="menu__item">
-											<a class="menu__link" href="https://frontender02.github.io/panelipvh/application">Сфера применения</a>
+											<a class="menu__link" href="#!">Сфера применения</a>
 										</li>
 										<li class="menu__item">
 											<a class="menu__link" href="#!">О компании</a>
@@ -136,35 +139,37 @@
 					</div>
 				</div>
 			</header>
-			<main class="page page-products">
-                <section class="products">
-                    <div class="products__decor products__decor--top"><img src="./img/decor/products_bg-top.svg"></div>
-                    <div class="products__decor products__decor--bottom"><img src="./img/decor/products_bg-bottom.svg"></div>
-                    <div class="products__container container-min">
-                        <div class="products__text block-text">
-                            <h2 class="products__title block-text__title">Профессиональные стройматериалы</h2>
-                            <h3 class="products__subtitle block-text__subtitle"><span class="clr-accent">KRON</span>BUILD</h3>
-                            <p class="products__description block-text__description">
-                                Наша продукция - это эксклюзивные составляющие и сертифицированное качество.
-                            </p>
+			<main class="page pege-application">
+                <section class="feedback">
+                    <div class="feedback__text-decor feedback__text-decor--left">
+                        <img src="./img/decor/form-decor-potolki.svg">
+                    </div>
+                    <div class="feedback__text-decor feedback__text-decor--right">
+                        <img src="./img/decor/form-decor-pvh.svg">
+                    </div>
+                    <div class="feedback__container container-min">
+                        <div class="feedback__text block-text">
+                            <h2 class="feedback__title block-text__title-min">Оформите <span>заказ</span></h2>
+                            <p class="feedback__description block-text__description">Заполните заявку, и мы свяжемся с вами для уточнения деталей заказа</p>
                         </div>
-                        <ul class="products__cards">
-                            <li class="products__card card-products">
-                                <div class="card-products__img-wrapper"><img src="./img/products/kronbuild-pena-vsesezonnaya-one.png" alt="Монтажная пена Всесезонная ONE 65"></div>
-                                <h4 class="card-products__title">Пена монтажная</h4>
-                                <a class="card-products__link" href="#!">Подробнее</a>
-                            </li>
-                            <li class="products__card card-products">
-                                <div class="card-products__img-wrapper"><img src="./img/products/kley.png" alt="Клей монтажный (жидкие гвозди)"></div>
-                                <h4 class="card-products__title">Герметики и клеи</h4>
-                                <a class="card-products__link" href="#!">Подробнее</a>
-                            </li>
-                            <li class="products__card card-products">
-                                <div class="card-products__img-wrapper"><img src="./img/products/pistolet-headrock.png" alt="Пистолет для монтажной пены HeadRock F1"></div>
-                                <h4 class="card-products__title">Пистолеты</h4>
-                                <a class="card-products__link" href="#!">Подробнее</a>
-                            </li>
-                        </ul>
+                        <form class="form-feedback form">
+                            <div class="form-feedback__grid form__grid">
+                                <input class="form-feedback__input form__input" type="text" placeholder="Ваше имя">
+                                <input class="form-feedback__input form__input" type="text" placeholder="Ваш город">
+                                <input class="form-feedback__input form__input" type="tel" placeholder="Контактный телефон">
+                                <input class="form-feedback__input form__input" type="email" placeholder="Контактный email">
+                                <textarea class="form-feedback__message form__message" placeholder="Подробности заказа"></textarea>
+                            </div>
+                            <label class="form-feedback__label-checkbox form__label-checkbox">
+                                <input class="form-feedback__input-checkbox form__input-checkbox visually-hidden" type="checkbox">
+                                <span class="form-feedback__castom-checkbox form__castom-checkbox"></span>
+                                <p class="form-feedback__label-text form__label-text">
+                                    Даю соглашение на обработку персональных данных.<br>
+                                    С <a class="form-feedback__label-link form__label-link" href="#!">политикой конфиденциальности ознакомлен(а).</a>
+                                </p>
+                            </label>
+                            <button class="form-feedback__btn form__btn btn">Заказать</button>
+                        </form>
                     </div>
                 </section>
             </main>
@@ -265,7 +270,7 @@
                 </div>
             </footer>
 		</div>
-		<script src="./js/swiper-bundle.min.js"></script>
+        <script src="./js/swiper-bundle.min.js"></script>
         <script src="./js/main.js"></script>
 	</body>
 </html>
