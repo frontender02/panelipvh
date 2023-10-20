@@ -31,4 +31,19 @@ document.addEventListener('DOMContentLoaded', () => {
 			prevEl: '.swiper-button-prev',
 		},
 	})
+
+	const swiperCompany = new Swiper('.certificate-company__slider', {
+		slidesPerView: 1.5,
+		spaceBetween: 10,
+		breakpoints: {
+			480: {
+				slidesPerView: 2.5,
+				spaceBetween: 20,
+			},
+			640: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
+		},
+	})
 })

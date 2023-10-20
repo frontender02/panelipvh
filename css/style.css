@@ -134,6 +134,12 @@ p + p {
 	margin-top: 10rem;
 }
 
+.title-section {
+	margin-bottom: 2rem;
+	font-weight: 800;
+	font-size: 2rem;
+}
+
 
 /** ================== decor ================== */
 .decor-top {
@@ -824,8 +830,6 @@ p + p {
 }
 .company-info__title {
 	margin-bottom: 0.75rem;
-	font-weight: 800;
-	font-size: 2.375rem;
 }
 .company-info__subtitle {
 	margin-bottom: 0.75rem;
@@ -880,6 +884,22 @@ p + p {
 	line-height: 150%;
 }
 /** ================== /advantages-company ================== */
+
+/** ================== certificate-company ================== */
+.certificate-company {
+	padding: 3.125rem 0;
+}
+.certificate-company__title {
+	text-align: center;
+}
+.certificate-company__slide {
+	display: flex;
+	justify-content: center;
+}
+.certificate-company__img-wrapper {
+	max-width: 15rem;
+}
+/** ================== /certificate-company ================== */
 
 
 
