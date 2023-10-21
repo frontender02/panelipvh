@@ -123,8 +123,13 @@ p + p {
 	background-color: var(--clr-white);
 	border-color: var(--clr-main);
 }
+
 .clr-accent {
 	color: var(--clr-accent);
+}
+
+._bg-main {
+	background-color: var(--bg-clr);
 }
 
 ._spt {
@@ -140,6 +145,34 @@ p + p {
 	font-size: 2rem;
 }
 
+/** ================== link-back ================== */
+.link-back {
+	margin: 1rem 0;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-weight: 600;
+	font-size: 1.125rem;
+	text-decoration: none;
+	color: var(--clr-main);
+	transition: color .3s ease-in-out;
+}
+.link-back:hover {
+	color: var(--clr-accent);
+}
+.link-back svg {
+	width: 0.5625rem;
+	height: 0.5625rem;
+	transform: rotate(180deg);
+}
+.link-back svg path {
+	fill: var(--clr-main);
+	transition: fill .3s ease-in-out;
+}
+.link-back:hover svg path {
+	fill: var(--clr-accent);
+}
+/** ================== /link-back ================== */
 
 /** ================== decor ================== */
 .decor-top {
@@ -383,6 +416,21 @@ p + p {
 	gap: 1.25rem;
 }
 /** ================== /menu ================== */
+
+/** ================== tabs ================== */
+.tabs__navigation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tab {
+	display: none;
+}
+.tab.active {
+	display: block;
+}
+/** ================== /tabs ================== */
 
 /** ================== swiper ================== */
 .swiper-button-prev,
@@ -808,9 +856,6 @@ p + p {
 /** ================== /feedback ================== */
 
 /** ================== company ================== */
-.page-company {
-	background-color: var(--bg-clr);
-}
 .company__inner {
 	padding: 3.125rem 0;
 	position: relative;
@@ -900,6 +945,106 @@ p + p {
 	max-width: 15rem;
 }
 /** ================== /certificate-company ================== */
+
+/** ================== page-application ================== */
+.application {
+	padding-bottom: 3.125rem;
+}
+.application__tex-box {
+	margin-bottom: 3rem;
+	display: grid;
+	justify-items: center;
+	gap: 1.125rem;
+	text-align: center;
+}
+.application__subtitle {
+	padding: 0.375rem 1.125rem;
+	display: inline-block;
+	font-weight: 800;
+	font-size: 1.75rem;
+	color: var(--clr-main);
+	background-color: var(--clr-accent);
+}
+.application__subtitle span {
+	color: var(--clr-white);
+}
+.application__title {
+	margin: 0;
+}
+.application__description {
+	max-width: 29.6875rem;
+}
+
+.tabs-application__navigation {
+	--border-radius: 6.25rem;
+	margin-bottom: 5rem;
+	align-items: stretch;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+}
+.tabs-application__btn {
+	padding: 1.25rem 0.75rem;
+	font-weight: 500;
+	font-size: 1.25rem;
+	text-align: center;
+	background-color: var(--clr-white);
+	border: 1px solid var(--clr-main);
+	transition: background-color .2s ease-in;
+	max-width: 20rem;
+	width: 100%;
+}
+.tabs-application__btn:not(:last-child) {
+	border-right: none;
+}
+.tabs-application__btn.active {
+	background-color: var(--clr-accent);
+}
+.tabs-application__btn:first-child {
+	border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+.tabs-application__btn:last-child {
+	border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.cards-application {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+}
+.cards-application__item {
+	flex: 0 1 32%;
+	padding: 2.125rem 0.25rem;
+	border-radius: 1rem;
+	background-color: var(--clr-white);
+	text-align: center;
+}
+.cards-application__item > *:not(:last-child) {
+	margin-bottom: 1rem;
+}
+.cards-application__item-icon {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0.25rem;
+	width: 5.3125rem;
+	height: 5.3125rem;
+	border-radius: 50%;
+	background-color: var(--clr-accent);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.cards-application__item-icon img,
+.cards-application__item-icon svg {
+	width: 2.625rem;
+	height: 2.625rem;
+}
+.cards-application__item-title {
+	font-weight: 600;
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+/** ================== /page-application ================== */
 
 
 
@@ -1187,6 +1332,14 @@ p + p {
 
 	.company__img-bg {
 		width: 70%;
+	}
+
+	.tabs-application__btn {
+		padding: 1rem 0.5rem;
+		max-width: 100%;
+	}
+	.cards-application__item {
+		flex: 0 1 48%;
 	}
 
 	.footer__top {
