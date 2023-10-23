@@ -538,6 +538,45 @@ p + p {
 }
 /** ================== /home slider ================== */
 
+/** ================== our-advantages ================== */
+.our-advantages {
+	padding: 3.125rem 0;
+	background-color: var(--bg-clr);
+}
+.our-advantages__title {
+	font-size: 1.5rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+.our-advantages__list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+.our-advantages__item {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+.our-advantages__item-icon-wrapper {
+	flex: 1 0 4rem;
+	width: 4rem;
+	height: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: var(--clr-accent);
+}
+.our-advantages__item-icon-wrapper img,
+.our-advantages__item-icon-wrapper svg {
+	width: 2rem;
+	height: 2rem;
+}
+/** ================== /our-advantages ================== */
+
 /** ================== profit ================== */
 .profit {
 	padding: 3.125rem 0;
@@ -1488,6 +1527,10 @@ p + p {
     .header__btn {
         display: none;
     }
+
+	.our-advantages__list {
+		justify-content: flex-start;
+	}
 
 	.products__cards {
 		grid-template-columns: 1fr;
