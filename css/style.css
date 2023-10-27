@@ -152,6 +152,30 @@ p + p {
 	font-size: 2rem;
 }
 
+/** ================== video-link ================== */
+.video-link {
+	padding: 0.5rem 1.5rem 0.4rem;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-weight: 600;
+	font-size: 1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--clr-white);
+	background-color: var(--clr-accent);
+	border-radius: 0.75rem;
+	transition: background-color .3s ease-in;
+}
+.video-link__icon {
+	width: 2rem;
+	height: 2rem;
+}
+.video-link:hover {
+	background-color: var(--clr-main);
+}
+/** ================== /video-link ================== */
+
 /** ================== link-back ================== */
 .link-back {
 	margin: 1rem 0;
@@ -1320,19 +1344,12 @@ p + p {
 	grid-template-columns: repeat(2, 1fr);
 	gap: 2rem;
 }
-.product-card__gallery {
-	/* display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 0.75rem; */
-}
 .product-card__gallery img {
 	border-radius: 0.75rem;
-	/* max-height: 280px; */
-    width: 100%;
-    object-fit: cover;
 }
 .product-card__gallery,
-.product-card__content {
+.product-card__content,
+.product-card__info {
 	padding: 2rem;
 	border-radius: 1.25rem;
 	border: 1px solid var(--border);
@@ -1381,7 +1398,36 @@ p + p {
 .product-card__text {
 	line-height: 150%;
 }
-.product-card__sub-box {
+.product-card__sub-box > *:not(:last-child) {
+	margin-bottom: 1rem;
+}
+.product-card__info {
+	margin-top: 2rem;
+}
+.product-card__price {
+	padding-bottom: 1.125rem;
+	border-bottom: 1px solid var(--border);
+	display: flex;
+	align-items: flex-end;
+	gap: 0.5rem;
+}
+.product-card__price-title {
+	font-weight: 800;
+	font-size: 1.25rem;
+}
+.product-card__price-text {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--clr-accent);
+}
+.product-card__buttons {
+	padding-top: 1.125rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.product-card__btn {
+	width: 100%;
 }
 /** ================== /product-card ================== */
 
@@ -1547,9 +1593,6 @@ p + p {
 
 	.product-card__inner {
 		grid-template-columns: 1fr;
-	}
-	.product-card__gallery img {
-		max-height: 17.5rem;
 	}
 }
 

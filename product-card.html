@@ -6,6 +6,7 @@
 		<title>Потолки ПВХ</title>
 		<link rel="stylesheet" href="./css/fonts.css" />
 		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="./css/videotube.min.css" />
 		<link rel="stylesheet" href="./css/normalize.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="icon" type="image/png" href="./img/favicon.png" />
@@ -169,9 +170,21 @@
                 <section class="product-card">
                     <div class="product-card__container container">
                         <div class="product-card__inner">
-							<div class="product-card__gallery">
-								<div class="product-card__img">
-									<img src="./img/products/potolok-silver-1.jpg" alt="">
+							<div class="product-card__block">
+								<div class="product-card__gallery">
+									<div class="product-card__img">
+										<img src="./img/products/potolok-silver-1.jpg" alt="">
+									</div>
+								</div>
+								<div class="product-card__info">
+									<div class="product-card__price">
+										<div class="product-card__price-title">Цена за комплект:</div>
+										<div class="product-card__price-text">7 500₽</div>
+									</div>
+									<div class="product-card__buttons">
+										<button class="product-card__btn btn btn-white">Где купить</button>
+										<button class="product-card__btn btn">Заказать</button>
+									</div>
 								</div>
 							</div>
                             <div class="product-card__content">
@@ -204,6 +217,14 @@
                                 <div class="product-card__box">
                                     <h3 class="product-card__subtitle">Инструкция по монтажу:</h3>
                                     <div class="product-card__sub-box">
+										<a class="product-card__video-link video-link tube" href="https://youtu.be/8ydXpRnqAcM?si=Lw6hQM1qmzLqQgwA">
+											<svg class="video-link__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+												<path fill="currentColor" d="M19.266 13.516a1.917 1.917 0 0 0 0-3.032A35.762 35.762 0 0 0 9.35 5.068l-.653-.232c-1.248-.443-2.567.401-2.736 1.69a42.49 42.49 0 0 0 0 10.948c.17 1.289 1.488 2.133 2.736 1.69l.653-.232a35.762 35.762 0 0 0 9.916-5.416Z"/>
+											</svg>
+											<span class="video-link__text">
+												Смотреть видео инструкцию по монтажу
+											</span>
+										</a>
                                         <div class="product-card__text">
                                             <p>
                                                 <ol>
@@ -348,6 +369,7 @@
 			</footer>
 		</div>
 	</body>
+	<script src="./js/videotube.min.js"></script>
 	<script src="./js/swiper-bundle.min.js"></script>
 	<script src="./js/main.js"></script>
 </html>
