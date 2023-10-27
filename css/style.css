@@ -1226,6 +1226,59 @@ p + p {
 }
 /** ================== /page-application ================== */
 
+/** ================== page-contacts ================== */
+.contacts {
+	padding: 3.125rem 0;
+}
+.contacts__inner {
+	display: flex;
+}
+.contacts__info {
+	padding: 1.5rem;
+	border-radius: 0.75rem;
+	border: 1px solid var(--border);
+	box-shadow: 0.9375rem 0.9375rem 3.125rem rgba(0,0,0,.15);
+}
+.contacts__info-title {
+	margin-bottom: 1.5rem;
+	padding-bottom: 1rem;
+	font-weight: 800;
+	font-size: 1.5rem;
+	border-bottom: 1px solid var(--border);
+}
+.contacts__info-list li + li {
+	margin-top: 1rem;
+}
+.item-contacts-info p + p {
+	margin-top: 0.25rem;
+}
+.item-contacts-info__title {
+	margin-bottom: 0.5rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-weight: 600;
+	font-size: 1rem;
+}
+.item-contacts-info__title-icon {
+	width: 1.25rem;
+	height: 1.25rem;
+}
+.item-contacts-info__text {
+	font-weight: 300;
+	line-height: 150%;
+}
+.item-contacts-info__text a {
+	text-decoration: none;
+	transition: color .3s ease-in;
+}
+.item-contacts-info__text a:hover {
+	color: var(--clr-accent);
+}
+.contacts__map {
+}
+/** ================== /page-contacts ================== */
+
 /** ================== banner ================== */
 .banner {
 	padding: 3.125rem 0;
