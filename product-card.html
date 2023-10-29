@@ -179,8 +179,8 @@
 										<div class="product-card__price-text">7 500₽</div>
 									</div>
 									<div class="product-card__buttons">
-										<button class="product-card__btn btn btn-white">Где купить</button>
-										<button class="product-card__btn btn">Заказать</button>
+										<button class="product-card__btn product-card__btn--buy btn btn-white">Где купить</button>
+										<button class="product-card__btn product-card__btn--order btn">Заказать</button>
 									</div>
 								</div>
 							</div>
@@ -255,6 +255,86 @@
                         </div>
                     </div>
                 </section>
+				<!-- Modals -->
+                <div class="modal modal-feedback">
+                    <div class="modal__main modal-feedback__main">
+                        <h2 class="modal__title modal-feedback__title">Заказать звонок</h2>
+                        <p class="modal__text modal-feedback__text">
+                            Наши менеджеры свяжутся с Вами в ближайшее время
+                        </p>
+                        <form class="modal__form modal-feedback__form">
+                            <input class="modal__input modal-feedback__input" type="text" placeholder="Ваше имя">
+                            <input class="modal__input modal-feedback__input" type="tel" placeholder="Ваш телефон">
+                            <input class="modal__input modal-feedback__input" type="email" placeholder="Ваш email">
+                            <input class="modal__input modal-feedback__input" type="text" placeholder="Ваш город">
+                            <textarea class="modal__textarea modal-feedback__textarea" placeholder="Ваше сообщение"></textarea>
+                            <button class="modal__btn modal-feedback__btn">Заказать</button>
+                        </form>
+                        <button class="modal__close modal-feedback__close">
+                            <svg viewBox="0 0 11 10" width="11" height="11" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.706.292a.999.999 0 0 0-1.413 0L6 3.586 2.77.356a.999.999 0 0 0-1.413 1.412L4.586 5 1.292 8.294a.999.999 0 1 0 1.413 1.413L6 6.412l3.233 3.232a.999.999 0 0 0 1.412-1.412L7.412 4.999l3.294-3.294a.999.999 0 0 0 0-1.413z" fill="currentColor"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal modal-feedback-product">
+                    <div class="modal__main modal-feedback-product__main">
+                        <h2 class="modal__title modal-feedback-product__title">Заказать</h2>
+                        <p class="modal__text modal-feedback-product__text">
+                            Наши менеджеры свяжутся с Вами в ближайшее время
+                        </p>
+                        <form class="modal__form modal-feedback__form">
+                            <input class="modal__input modal-feedback__input" type="text" placeholder="Ваше имя">
+                            <input class="modal__input modal-feedback__input" type="tel" placeholder="Ваш телефон">
+                            <input class="modal__input modal-feedback__input" type="email" placeholder="Ваш email">
+                            <input class="modal__input modal-feedback__input" type="text" placeholder="Ваш город">
+                            <textarea class="modal__textarea modal-feedback__textarea" placeholder="Ваше сообщение"></textarea>
+                            <button class="modal__btn modal-feedback-product__btn">Заказать</button>
+                        </form>
+                        <button class="modal__close modal-feedback-product__close">
+                            <svg viewBox="0 0 11 10" width="11" height="11" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.706.292a.999.999 0 0 0-1.413 0L6 3.586 2.77.356a.999.999 0 0 0-1.413 1.412L4.586 5 1.292 8.294a.999.999 0 1 0 1.413 1.413L6 6.412l3.233 3.232a.999.999 0 0 0 1.412-1.412L7.412 4.999l3.294-3.294a.999.999 0 0 0 0-1.413z" fill="currentColor"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+				<div class="modal modal-buy">
+                    <div class="modal__main modal-buy__main">
+                        <h2 class="modal__title modal-buy__title">Варианты доставки</h2>
+						<div class="modal__content modal-buy__content">
+							<div class="modal__content-item">
+								<h3 class="modal__content-title">Доставка по Санкт-Петербургу</h3>
+								<div class="modal__content-price">1200₽</div>
+								<p class="modal__content-text">
+									Курьерская доставка осуществляется на следующий день после оформления заказа, если товар есть в наличии. Курьерская доставка осуществляется в пределах КАД Санкт-Петербурга ежедневно с 10.00 до 21.00. 
+								</p>
+							</div>
+							<div class="modal__content-item">
+								<h3 class="modal__content-title">
+									Доставка по Ленобласти (доставка по СПб + 20р./км от КАД) [оплачивается отдельно]
+								</h3>
+								<div class="modal__content-price">800₽</div>
+								<p class="modal__content-text">
+									Доставка по Ленинградской области - тариф по Санкт-Петербургу + 20 руб. за каждый километр от КАД.
+								</p>
+							</div>
+							<div class="modal__content-item">
+								<h3 class="modal__content-title">
+									Доставка ТК в регионы России (согласовать с менеджером) [оплачивается отдельно]
+								</h3>
+								<div class="modal__content-price">800₽</div>
+								<p class="modal__content-text">
+									Стоимость доставки транспортной компанией в регионы, по согласованию с менеджером.
+								</p>
+							</div>
+						</div>
+                        <button class="modal__close modal-buy__close">
+                            <svg viewBox="0 0 11 10" width="11" height="11" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.706.292a.999.999 0 0 0-1.413 0L6 3.586 2.77.356a.999.999 0 0 0-1.413 1.412L4.586 5 1.292 8.294a.999.999 0 1 0 1.413 1.413L6 6.412l3.233 3.232a.999.999 0 0 0 1.412-1.412L7.412 4.999l3.294-3.294a.999.999 0 0 0 0-1.413z" fill="currentColor"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </main>
 			<footer class="footer">
 				<div class="footer__container container">

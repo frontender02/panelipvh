@@ -66,50 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		btnOpen: '.header__btn',
 		btnClose: '.modal-feedback__close',
 	})
-	modalController({
-		modal: '.modal-feedback-product',
-		btnOpen: '.product-card__btn--order',
-		btnClose: '.modal-feedback-product__close',
-	})
-	modalController({
-		modal: '.modal-buy',
-		btnOpen: '.product-card__btn--buy',
-		btnClose: '.modal-buy__close',
-	})
-
-	// Tabs
-	function showTabs(btn, body) {
-		const tabsBtn = document.querySelectorAll(btn)
-		const tabsContent = document.querySelectorAll(body)
-
-		if (tabsContent.length > 0 || tabsBtn.length > 0) {
-			function hideTabContent() {
-				tabsContent.forEach(item => {
-					item.classList.remove('active')
-				})
-
-				tabsBtn.forEach(item => {
-					item.classList.remove('active')
-				})
-			}
-
-			function showTabContent(i = 0) {
-				tabsContent[i].classList.add('active')
-				tabsBtn[i].classList.add('active')
-			}
-
-			hideTabContent()
-			showTabContent()
-
-			tabsBtn.forEach((tab, index) => {
-				tab.addEventListener('click', () => {
-					hideTabContent()
-					showTabContent(index)
-				})
-			})
-		}
-	}
-	showTabs('.tabs-application__btn', '.tab-application')
 
 	// Slider
 	const swiperHome = new Swiper('.home__slider', {
@@ -121,21 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
-		},
-	})
-
-	const swiperCompany = new Swiper('.certificate-company__slider', {
-		slidesPerView: 1.5,
-		spaceBetween: 10,
-		breakpoints: {
-			480: {
-				slidesPerView: 2.5,
-				spaceBetween: 20,
-			},
-			640: {
-				slidesPerView: 3,
-				spaceBetween: 30,
-			},
 		},
 	})
 })
