@@ -1291,6 +1291,7 @@ p + p {
 	margin-bottom: 3.125rem;
 	display: flex;
 	justify-content: space-between;
+	gap: 1.5rem;
 }
 
 .info-application {
@@ -1347,6 +1348,24 @@ p + p {
 .info-application__item-text {
 	flex: 0 1 80%;
 	font-size: 14px;
+}
+
+.video-application {
+	flex: 0 1 45%;
+	position: relative;
+}
+.video-application__preview {
+	height: 100%;
+	object-fit: cover;
+}
+.video-application__play {
+	width: 5rem;
+	height: 5rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
 }
 /** ================== /page-application ================== */
 
@@ -1944,9 +1963,6 @@ p + p {
 		padding: 1rem 0.5rem;
 		max-width: 100%;
 	}
-	.info-application {
-		flex: 0 1 100%;
-	}
 	.cards-application__item {
 		flex: 0 1 48%;
 	}
@@ -1998,6 +2014,14 @@ p + p {
 	.advantages-company__icon-wrapper {
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.tabs-application__blog {
+		flex-direction: column;
+	}
+	.info-application,
+	.video-application {
+		flex: 0 1 100%;
 	}
 }
 
