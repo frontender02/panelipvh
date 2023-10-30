@@ -958,6 +958,15 @@ p + p {
 	left: 0;
 	transform: scale(-1, 1);
 }
+.manufacturer__text {
+	max-width: 40rem;
+}
+.manufacturer__subtitle {
+	font-weight: 800;
+}
+.manufacturer__title {
+	font-size: 3rem;
+}
 /** ================== /manufacturer ================== */
 
 /** ================== form ================== */
@@ -1902,6 +1911,13 @@ p + p {
 		left: 0;
 	}
 
+	.manufacturer__subtitle {
+		font-size: 1.5rem;
+	}
+	.manufacturer__title {
+		font-size: 2rem;
+	}
+
 	.profit__list {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(2, 1fr);
@@ -1928,9 +1944,6 @@ p + p {
 		padding: 1rem 0.5rem;
 		max-width: 100%;
 	}
-	/* .tabs-application__blog {
-		flex-direction: column;
-	} */
 	.info-application {
 		flex: 0 1 100%;
 	}
@@ -1996,6 +2009,13 @@ p + p {
     .header__btn {
         display: none;
     }
+
+	.manufacturer__subtitle {
+		font-size: 1.25rem;
+	}
+	.manufacturer__title {
+		font-size: 1.5rem;
+	}
 
 	.our-advantages__list {
 		justify-content: flex-start;
