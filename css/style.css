@@ -266,6 +266,41 @@ p + p {
 }
 /** ================== /logo ================== */
 
+/** ================== tg-widget ================== */
+.tg-widget {
+	position: fixed;
+	left: 1.75rem;
+	bottom: 3rem;
+	z-index: 40;
+}
+.tg-widget__link {
+	padding: 0.5rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	background-color: var(--clr-main);
+	box-shadow: 0.25rem 0.5rem 0.75rem rgba(0, 0 , 0, 0.15);
+	transition: background-color .3s ease-in;
+}
+.tg-widget__link svg {
+	width: 1.75rem;
+	height: 1.75rem;
+}
+.tg-widget__link svg path {
+	fill: var(--clr-accent);
+	transition: fill .3s ease-in;
+}
+.tg-widget__link:hover {
+	background-color: var(--clr-accent);
+}
+.tg-widget__link:hover svg path {
+	fill: var(--clr-main);
+}
+/** ================== /tg-widget ================== */
+
 /** ================== block-text ================== */
 .block-text {
 	margin: 0 auto;
