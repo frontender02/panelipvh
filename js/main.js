@@ -129,14 +129,4 @@ document.addEventListener('DOMContentLoaded', () => {
 		btnOpen: '.header__btn',
 		btnClose: '.modal-feedback__close',
 	})
-	modalController({
-		modal: '.modal-feedback-product',
-		btnOpen: '.product-card__btn--order',
-		btnClose: '.modal-feedback-product__close',
-	})
-	modalController({
-		modal: '.modal-buy',
-		btnOpen: '.product-card__btn--buy',
-		btnClose: '.modal-buy__close',
-	})
 })
